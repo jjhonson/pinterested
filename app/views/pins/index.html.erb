@@ -13,7 +13,7 @@
                 <% if pin.user == current_user %>
                 <div class="panel-footer">
                   <%= link_to 'Edit', edit_pin_path(pin) %>
-                  <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %> <br/>
+                  | <%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' } %> <br/>
             </div>
             <% end %>
             </div>
