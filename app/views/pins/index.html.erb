@@ -1,9 +1,10 @@
+<%= render 'home/jumbo' unless user_signed_in? %>
+
 <div id="pins" class="transitions-enabled.masonry">
     <% @pins.each do |pin| %>
 
     <div class="box">
         <div class="panel panel-default">
-
             <%= link_to image_tag(pin.image.url(:medium)), pin %> <br/>
             <div class="panel-body">
                 <%= pin.description %> <br/>
@@ -16,7 +17,6 @@
             </div>
             <% end %>
             </div>
-
         </div>
     <% end %>
 </div>
